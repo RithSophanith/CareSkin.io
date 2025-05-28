@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Registration</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      width: 90%;
+      max-width: 450px;
+      color: #fff;
+    }
+
+    .card h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 15px;
+    }
+
+    input::placeholder {
+      color: #eee;
+    }
+
+    input:focus {
+      outline: 2px solid #00e6e6;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(45deg, #00e6e6, #00ff88);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>🛍️ Product Registration</h2>
+    <form action="/register-product" method="post">
+      
+      <label for="customerName">👤 Customer Name</label>
+      <input type="text" id="customerName" name="customerName" placeholder="Enter full name" required>
+
+      <label for="email">📧 Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="phone">📱 Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g., 0123456789">
+
+      <label for="productName">📦 Product Name</label>
+      <input type="text" id="productName" name="productName" placeholder="e.g., ASUS Monitor" required>
+
+      <label for="model">🔢 Model Number</label>
+      <input type="text" id="model" name="model" placeholder="e.g., MZ27AQ" required>
+
+      <label for="serial">🔐 Serial Number</label>
+      <input type="text" id="serial" name="serial" placeholder="e.g., SN12345678" required>
+
+      <label for="purchaseDate">🗓️ Purchase Date</label>
+      <input type="date" id="purchaseDate" name="purchaseDate" required>
+
+      <button type="submit">✅ Register Product</button>
+    </form>
+  </div>
+
+</body>
+</html>
